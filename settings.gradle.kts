@@ -9,5 +9,5 @@ pluginManagement {
     }
 }
 
-include("source", "assets"
-    , "bukkit_1_08", "bukkit_1_09", "bukkit_1_17")
+include("common", "module",
+    "bukkit_1_08", "bukkit_1_09", "bukkit_1_17")
