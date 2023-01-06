@@ -1,8 +1,3 @@
 main: com.github.misuda12.pb.PowerBlocksMain
 name: PowerBlocks
 version: 1.0-SNAPSHOT
-# Used to define validity of this plugin
-spigot:
-  userId: "%%__USER__%%"
-  resourceId: "%%__RESOURCE__%%"
-  license: "%%_NONCE_%%"

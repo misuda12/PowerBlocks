@@ -1,0 +1,1 @@
+package com.github.misuda12.pb.common;
