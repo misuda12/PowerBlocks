@@ -8,3 +8,6 @@ pluginManagement {
         kotlin("jvm") version kotlinVersion
     }
 }
+
+include("source", "assets"
+    , "bukkit_1_08", "bukkit_1_09", "bukkit_1_17")

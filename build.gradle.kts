@@ -5,11 +5,20 @@ plugins {
     java
 }
 
-group       = "com.github.misuda12"
-version     = "1.0-SNAPSHOT"
-description = ""
-
 allprojects {
+    apply(plugin = "kotlin")
+
+    kotlin {
+        sourceSets.all {
+            with(languageSettings) {
+                progressiveMode = true
+                enableLanguageFeature("InlineClasses")
+                optIn("kotlin.RequiresOptIn")
+                optIn("kotlin.contracts.ExperimentalContracts")
+            }
+        }
+    }
+
     repositories {
         maven { url = uri("https://repo.aikar.co/content/groups/aikar/") }
         maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
@@ -22,14 +31,9 @@ allprojects {
         testImplementation(kotlin("test"))
     }
 
-    kotlin {
-        sourceSets.all {
-            with(languageSettings) {
-                progressiveMode = true
-                enableLanguageFeature("InlineClasses")
-            }
-        }
-    }
+    group       = "com.github.misuda12"
+    version     = "1.0-SNAPSHOT"
+    description = ""
 }
 
 tasks.test {
